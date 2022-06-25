@@ -34,11 +34,11 @@
 
 const pizza = {
     name: 'Thin Crust',
-    price: '$20',
+    price: 20,
     category: 'entree',
     popularity: 88,
     rating: 95,
-    tags: 'kids, drinks, desserts,'
+    tags: ['kids, drinks, desserts']
 }
 
 //////////////////PROBLEM 2////////////////////
@@ -74,8 +74,8 @@ console.log(pizza['tags']);
 
 //CODE HERE
 
-let price = pizza.price
-console.log(pizza['price']);
+let {price} = pizza
+console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -86,8 +86,8 @@ console.log(pizza['price']);
 
 //CODE HERE
 
-let category = pizza.category
-console.log(pizza['category']);
+let {category} = pizza
+console.log(category);
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -105,6 +105,8 @@ console.log(pizza['category']);
 
 
 
+
+
 //////////////////PROBLEM 4////////////////////
 /* 
     Let's filter the food objects according
@@ -118,6 +120,11 @@ console.log(pizza['category']);
 */
 
 //CODE HERE
+
+const food = ['h', 'l' 't']
+
+const filteredFood = foodArr.filter((food) => food[0] === 'h')
+console.log(filteredFood)
 
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
@@ -164,6 +171,17 @@ console.log(pizza['category']);
 
 //CODE HERE
 
+const filterByProperty = function(property, number, type) {
+    const filteredArr = foodArr.filter((element) => {
+        if(type === 'above') {
+            return element[property] > number
+        } else if(type ==== 'below') {
+            return element[property] < number
+        }
+    })
+    return filteredArr
+}
+
 
 /*
     Invoke the `filterByProperty` function passing
@@ -173,3 +191,5 @@ console.log(pizza['category']);
 */
 
 //CODE HERE
+
+console.log(filteredByProperty('popularity', 4, 'below'))

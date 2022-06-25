@@ -56,11 +56,7 @@ console.log(`The order for customer ${this.customerId} is now ${this.newStatus}`
 
 //CODE HERE
 
-let firstTicket = new tickets(
-    'sushi, noodles, eggroll',
-    420,
-    888
-)
+const firstTicket = new tickets('pizza, bread, and soda', '7:03 PM', 7)
 
 /*
     Call the `updateStatus` method on
@@ -69,5 +65,5 @@ let firstTicket = new tickets(
 */
 
 //CODE HERE
-firstTicket.updateStatus()
+firstTicket.updateStatus('cooking')
 console.log(firstTicket)

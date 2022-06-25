@@ -23,15 +23,8 @@
 
 //CODE HERE
 
-//let greetUser = (username) => {
-    //if (username = 'James Pehrson'){
-    //return (`Welcome back, ${username}`)
-   // }
-//}
-//greetUser ("James Pehrson");
-
-const sayHiStranger = () => 'Hi, stranger'
-
+let greetUser = (username) => {`Welcome back, ${username}`}
+console.log(greetUser('James Pehrson'))
 //////////////////PROBLEM 2////////////////////
 /* 
     Below is an array of zip codes that are in
@@ -56,28 +49,18 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 
-let canWeDeliver = (zipCode) => {
-    const canWeDeliver = zipCode[0]
-    for(let i = 0; i < deliveryAreaZipCodes; i++){
-        if(zipCode[i] <= canWeDeliver){
-            console.log('NO WE NOT DELIVERING')
-        } else {
-            canWeDeliver = zipCode[i]
-        }
-
-        }
-            
-
-        }
-     console.log('BE THERE IN 5!')
-
+function canWeDeliver(zipCode) {
+    if (deliveryAreaZipCodes.includes(zipCode)) {
+        return 'You are in our delivery zone!'
+    } else {
+        return 'Sorry you are out of our delivery zone'
+    }
+}
+console.log(canWeDeliver(85205)) // Right
+console.log(canWeDeliver(88888)) // wrong 
     
 
-canWeDeliver(85205)
-canWeDeliver(85213)
-canWeDeliver(85204)
-canWeDeliver(85203)
-canWeDeliver(85206)
+
 /* 
     Problem 2 Continued
 
@@ -97,6 +80,16 @@ canWeDeliver(85206)
 
 // CODE HERE
 
+function canWeDeliverTwo(zipCode) {
+    for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
+        if (deliveryAreaZipCodes[i] === zipCode) {
+            return 'You are in our delivery zone!'
+        }
+    }
+    return 'You are not in our delivery zone.'
+}
+console.log(canWeDeliverTwo(88888)) //wrong
+console.log(canWeDeliver(85213)) //right
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -132,6 +125,7 @@ const deals = [
 */
 
 //CODE HERE
+
 
 
 

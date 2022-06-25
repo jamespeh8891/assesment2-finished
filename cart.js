@@ -61,7 +61,11 @@ console.log(totalNum)
 */
 
 //CODE HERE
-
+function calcFinalPrice(cratTotal, couponValue, tax) {
+    let total = cartTotal = (tax * cartTotal) - couponValue
+    return total
+}
+console.log(calcFinalPrice(5,1,.05))
 
 
 //////////////////PROBLEM 3////////////////////
@@ -95,3 +99,10 @@ console.log(totalNum)
 */
 
 //CODE HERE
+
+const customerObj = {
+    name: 'James Pehrson',
+    bilingAddress: '1000 n main st',
+    accountBalanceInDollars: 88.19,
+    isRewardMember: true
+}
